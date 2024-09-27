@@ -1,0 +1,45 @@
+
+nav{ position:fixed; left:-200px; top:72px; bottom:0; background:#FFF; width:250px; padding-left:200px; overflow:hidden; transition: all 0.3s ease-in-out; z-index:3; color: #30323f;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;}
+
+nav.navActive{ left:0; padding-left:0;background:#FFF;}
+
+.nav_trigger{background: url(../../assets/images/trigger.svg) no-repeat 50% 50%; width:50px; height:52px; display:block; cursor:pointer; transform: rotateY(180deg); }
+.nav_trigger.ntActive{background: url(../../assets/images/trigger.svg) no-repeat 50% 50%; transform: rotateY(0deg);}
+
+/* .nav{ width:250px;}
+.nav li{border-bottom:1px solid #46484d;}
+.nav li a{ display:block; padding:15px 15px 15px 50px; position:relative; color:#FFF;transition: all 0.3s ease;}
+.nav li a:before{content:''; position:absolute; width:30px; height:35px; left:10px; top:8px;}
+.nav li a.home:before{ background:url(../../assets/images/icon-set1.png) no-repeat 0 0;}
+.nav li a.dashboard:before{ background:url(../../assets/images/icon-set1.png) no-repeat 0 -30px;}
+.nav li a.createTask:before{ background:url(../../assets/images/icon-set1.png) no-repeat 0 -60px;}
+.nav li a.viewTask:before{ background:url(../../assets/images/icon-set1.png) no-repeat 0 -90px;}
+.nav li a.compare:before{ background:url(../../assets/images/icon-set1.png) no-repeat 0 -120px;}
+.nav li a:hover{ background:#459ff4;}
+.nav li.navActive a{ background:#459ff4;} */
+
+.navigation{  width: 200px;  margin-left: 20px;}
+.navigation li{ position: relative; margin-bottom: 16px; }
+.navigation li span{  font-size: 16px; color: #30323f; font-style: normal; font-weight: 400; opacity:1; visibility:visible; height: 27px; display: block;  padding-top: 4px; }
+.navigation li:hover span{color:#0C9AFF; cursor: pointer; }
+.navigation li>*{opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out;}
+.navigation.navActive li>*{ opacity:1; visibility:visible;}
+.navigation>li:before{content: ''; display: block; width:27px; height:27px; border-radius: 50%; position: absolute; left: -40px; top:0;}
+
+.navigation>li.user_management:before{ background:#FFF url(../../assets/images/userManagement.svg) no-repeat 50% 50%;}
+.navigation>li.global_masters:before{ background:#FFF url(../../assets/images/global_masters.svg) no-repeat 50% 50%;}
+
+.navigation>li.user_management:hover:before{ background:#D7F4FF url(../../assets/images/userManagement.svg) no-repeat 50% 50%;}
+.navigation>li.global_masters:hover:before{ background:#D7F4FF url(../../assets/images/global_masters.svg) no-repeat 50% 50%;}
+
+.subNavTrigger>span{ position: relative; display: block;}
+.subNavTrigger>span:after{content: ''; display: block; width: 15px; height: 15px; background: url(../../assets/images/down-arrow.svg) no-repeat 50% 50%; position: absolute; top: 7px; right: 0; transform: rotate(-90deg); transition: all 0.3s ease-in-out; transform-origin: center;}
+.subNavActive>span:after{ transform: rotate(0deg) !important; transform-origin: center !important;}
+
+.subNav{ padding-top:10px; padding-left: 0; height: 0; transition: all 0.3s ease-in-out; overflow: hidden; opacity:1 !important; visibility:visible!important;}
+
+.expandNav{ padding:0px 50px 0 274px !important;}
