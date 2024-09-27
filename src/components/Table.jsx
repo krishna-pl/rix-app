@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react' 
+import { useState, useMemo } from 'react' 
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
@@ -20,7 +20,7 @@ function Table() {
     const AddShortNameFunc = q => {
       return(
         <>
-        <span class="ShortNameBg">{q.value.split(" ")[0][0]}{q.value.split(" ")[1][0]}</span> 
+        <span className="ShortNameBg">{q.value.split(" ")[0][0]}{q.value.split(" ")[1][0]}</span> 
         {q.value}
         </>
       )
@@ -41,7 +41,7 @@ function Table() {
 
    
 
-    const [rowData, setRowData] = useState([
+    const [rowData] = useState([
         { UserName: "Tammoy Das", Email: "tanmoy@gmail.com", UserType: "Internal", Company: "Reliance Industries", AccessProfiles: "Group Admin", LastLogin: "15/01/2024", Status:"Updated"},
         { UserName: "Sanjib Debnath", Email: "sanjibdebnath@gmail.com", UserType: "Internal", Company: "Tata Consultancy Services", AccessProfiles: "Rix Manager", LastLogin: "15/01/2024", Status:"Active"},
         { UserName: "Aritrak Debnath", Email: "aritrak.design@gmail.com", UserType: "Internal", Company: "Hindustan Unilever", AccessProfiles: "Group Admin", LastLogin: "15/01/2024", Status:"Updated"},
@@ -59,8 +59,8 @@ function Table() {
         { UserName: "Krishna Pawar", Email: "krishna@rix.com", UserType: "Internal", Company: "Tata Consultancy Services", AccessProfiles: "Rix Manager", LastLogin: "15/01/2024", Status:"Inactive"},
       ]);
       
-      const [colDefs, setColDefs] = useState([
-        //{ field: "UserName",   checkboxSelection:true,     lockPinned:true,  width:220 }, cellRenderer: p => <strong>{p.value}</strong>,
+      const [colDefs] = useState([
+        //{ field: "UserName",   checkboxSelection:true,     lockPinned:true,  width:220, , cellRenderer: p => <strong>{p.value}</strong> },
         { field: "UserName", cellRenderer: AddShortNameFunc, maxWidth:180, minWidth:180  },
         { field: "Email",  maxWidth:200, minWidth:200 },
         { field: "UserType",  maxWidth:150, minWidth:150  },
@@ -71,7 +71,7 @@ function Table() {
       ]);
      
       //const defaultColDef = {sortable:true,  floatingFilter:false, editable:true, flex:1,  resizable: true, width:120,  wrapText: true,  autoHeight: true,} 
-      const defaultColDef = {sortable:true,  floatingFilter:false,  flex:1, } 
+      const defaultColDef = {sortable:true,  floatingFilter:false,  flex:1 } 
 
       let gridApi
       const onGridReady = p => {
@@ -114,6 +114,7 @@ function Table() {
        //paginationAutoPageSize={true}
        onGridReady={onGridReady}
        paginationPageSizeSelector={[5, 10, 20, 50, 100]}
+       
 
    />
  </div>
