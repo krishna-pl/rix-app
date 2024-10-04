@@ -30,8 +30,8 @@ return (
        <h6 className='mb-3'>Search</h6>
         <article className={`mb-3 ${styles.filterBox1}`}>
             
-            <label className="checkbox mb-12"><input type="checkbox" name="" value="" id="selectAll" /><span className={styles.heading}>first Name</span></label>
-           <Select options={options} className='mb-12' />
+            <label className="checkbox mb-12"><input type="checkbox" name="" value="" checked id="selectAll" /><span className={styles.heading}>first Name</span></label>
+           <Select options={options}  className={`mb-12 ${styles.customSelect}`} />
             <input type="text"  value="Search" />
         </article>
        <ul>

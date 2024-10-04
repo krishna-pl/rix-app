@@ -83,10 +83,10 @@ main.expandNav{ padding:72px 0px 50px 250px;}
 
 
 
-.ShortNameBg{background-color: #0A82EB; width: 20px; height: 20px; border-radius: 50%; display: inline-block; line-height: 20px; color: #FFF; font-size: 10px;
-font-style: normal; font-weight: 900; text-align: center; margin-right: 8px;}
+.ShortNameBg{background-color: #0A82EB; width: 20px; height: 20px; border-radius: 50%; display: inline-block; line-height: 21px; color: #FFF; font-size: 10px;
+font-style: normal; font-weight:600; text-align: center; margin-right: 8px;}
 
-.statusBtn{display: inline-block; height: 20px; line-height: 20px; padding: 0px 12px; border-radius: 10px;font-size: 12px; }
+.statusBtn{display: inline-block; height: 20px; line-height: 18px; padding: 0px 12px; border-radius: 10px; font-size: 12px; }
 .statusBtn.updatedStatus{ border: 1px solid #FC9A06; color: #FC9A06; background: #FFF2D9; }
 .statusBtn.activeStatus{border: 1px solid #4CAB4F; color: #4CAB4F; background: #F0FFF0; }
 .statusBtn.inactiveStatus{border: 1px solid #9D9D9D; color: #9D9D9D;}
@@ -97,7 +97,7 @@ font-style: normal; font-weight: 900; text-align: center; margin-right: 8px;}
 .mainContHolder{ padding:24px;}
 
 .pageHead{   padding: 16px; border-bottom: 1px solid #E2E3E9;}
-.pageHead h1{font-size: 24px; font-style: normal; font-weight: 400;}
+.pageHead h1{font-size: 24px; font-style: normal; font-weight: 600;}
 .pageHead span{font-size: 14px; font-style: normal;	font-weight: 400;}
 
 .box{ background-color: #FFF; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);}
@@ -105,14 +105,14 @@ font-style: normal; font-weight: 900; text-align: center; margin-right: 8px;}
 
 .tableFilter{  padding: 16px;}
 .tableFilter>div{ display: flex; justify-content: space-between; align-items: center;}
-.tableFilter>strong{ display: block; margin-bottom:16px;font-size: 16px; font-style: normal; font-weight:600; color: #3D3D3D;}
+.tableFilter>strong{ display: block; margin-bottom:8px;font-size: 18px; font-style: normal; font-weight:600; color: #3D3D3D;}
 .tableFilter aside{ display: flex; justify-content: space-between; align-items: center;}
 .filter{display: flex; justify-content: space-between; margin-left:16px;}
 .filterItem{ margin-right:16px;}
 
-.totalFilter{ font-size: 16px; margin-right: 30px;}
-.totalFilter span{ display: inline-block; margin-left: 15px;}
-.filter .filterItem{color: #0C9AFF; font-size: 16px;  position: relative; padding-right: 30px; margin-right: 15px;}
+.totalFilter{ font-size: 14px; margin-right: 30px; font-weight: 600;}
+.totalFilter span{ display: inline-block; margin-left:5px; font-weight: 600; border-radius: 30px; background: #F6F6F6; padding: 8px 16px; line-height: 16px;}
+.filter .filterItem{color: #0C9AFF; font-size: 14px;  position: relative; padding-right: 30px; margin-right: 15px;}
 .filter .filterItem:not(:last-child):after { content: ''; display: block; width: 15px; height: 15px; background: url(/src/assets/images/down-arrow.svg) no-repeat 50% 50%; position: absolute; top: 6px; right: 0; transform: rotate(-90deg);}
 .filterItem span{ position: relative; padding-right: 20px; cursor: pointer;}
 .filterItem span:after{content: ''; display: block; width: 0px; height: 0px; border:3px solid transparent; border-top: 3px solid #0C9AFF; position: absolute; top: 10px; right: 0;}
@@ -155,7 +155,7 @@ font-style: normal; font-weight: 900; text-align: center; margin-right: 8px;}
    /*  border-left: 1px solid #cacaca;
     border-right: 1px solid #cacaca; */
     background-color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     color: #505050;
 }
 
@@ -184,7 +184,19 @@ font-style: normal; font-weight: 900; text-align: center; margin-right: 8px;}
     --ag-row-border-color: rgba(184, 184, 184, 1);
 }
 .ag-header-cell:not(.ag-column-resizing) + .ag-header-cell:not(.ag-column-hover):not(.ag-header-cell-moving):hover{ background-color: #FAFAFA !important;}
- /* .ag-root ::-webkit-scrollbar {
+
+.ag-cell-focus,.ag-cell-no-focus{
+  border:none !important;
+}
+/* This CSS is to not apply the border for the column having 'no-border' class */
+.no-border.ag-cell:focus{
+  border:none !important;
+  outline: none;
+}
+
+.accessProfiles{display: inline-block; margin-left: 5px; font-weight: 400; border-radius: 30px; background: #F6F6F6; padding: 8px 16px; line-height: 16px;}
+
+/* .ag-root ::-webkit-scrollbar {
     width: 3px;
     height: 3px;
 	background-color: #FFF;
@@ -218,12 +230,13 @@ font-style: normal; font-weight: 900; text-align: center; margin-right: 8px;}
 .checkbox input:checked ~ span:before { background:url(/src/assets/images/checkbox.png) no-repeat 0 100%;}
 
 
-input[type=text] { padding: 7px 15px; background-color: #FFF;  border: 1px solid #cdcdcd;  border-radius:4px; color: #777;}
+input[type=text] { padding: 7px 15px; background-color: #FFF;  border-radius: 4px; border: 1px solid  #E2E3E9; box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06); color: #777;}
 input[type=text]:hover, input[type=text]:focus { border-color: #50D2FF !important; box-shadow: none !important;}
 
 .btn-primary {
     background-color: #0C9AFF !important;
     border-color: #0C9AFF !important;
+    font-size: 14px !important;
   }  
   .btn-primary:hover {
     background-color: #0c86dd !important;
@@ -239,7 +252,15 @@ input[type=text]:hover, input[type=text]:focus { border-color: #50D2FF !importan
 
 
 @media screen and (max-width:1368px){
-	
+
+  .pageHead h1 {
+    font-size: 22px;
+}
+
+	.ag-center-cols-container .ag-row {
+    font-size: 12px;
+}
+
 }
 
 @media screen and (max-width:1290px){

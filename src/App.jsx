@@ -63,7 +63,7 @@ const changeFiltterPopState = (a) => {
           <strong>User List</strong>         
             <div>
             <aside>
-              <div className="totalFilter">Total <span>20</span> Users</div>
+              <div className="totalFilter">Total <span>20 Users</span></div>
             <div className="filter">
               <div className="filterItem" onClick={toggleFiltterPop}><span>Status All</span>
               <div className='filterPop'><strong>Status</strong><a href="#">All</a><a href="#">Active</a><a href="#">Inactive</a><a href="#">All</a><a href="#">Active</a><a href="#">Inactive</a><a href="#">All</a><a href="#">Active</a><a href="#">Inactive</a></div>

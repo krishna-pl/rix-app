@@ -36,6 +36,9 @@ nav.navActive{ left:0; padding-left:0;background:#FFF;}
 .navigation>li.user_management:hover:before{ background:#D7F4FF url(../../assets/images/userManagement.svg) no-repeat 50% 50%;}
 .navigation>li.global_masters:hover:before{ background:#D7F4FF url(../../assets/images/global_masters.svg) no-repeat 50% 50%;}
 
+.navigation>li.user_management.umA:before{ background:#D7F4FF url(../../assets/images/userManagement.svg) no-repeat 50% 50%;}
+.navigation>li.user_management.umA span{color:#0C9AFF;}
+
 .subNavTrigger>span{ position: relative; display: block;}
 .subNavTrigger>span:after{content: ''; display: block; width: 15px; height: 15px; background: url(../../assets/images/down-arrow.svg) no-repeat 50% 50%; position: absolute; top: 7px; right: 0; transform: rotate(-90deg); transition: all 0.3s ease-in-out; transform-origin: center;}
 .subNavActive>span:after{ transform: rotate(0deg) !important; transform-origin: center !important;}

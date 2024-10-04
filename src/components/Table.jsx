@@ -42,7 +42,7 @@ function Table() {
    
 
     const [rowData] = useState([
-        { UserName: "Tammoy Das", Email: "tanmoy@gmail.com", UserType: "Internal", Company: "Reliance Industries", AccessProfiles: "Group Admin", LastLogin: "15/01/2024", Status:"Updated"},
+        { UserName: "TammoyTammoyTammoy Das", Email: "tanmoy@gmail.com", UserType: "Internal", Company: "Reliance Industries", AccessProfiles: "Group Admin", LastLogin: "15/01/2024", Status:"Updated"},
         { UserName: "Sanjib Debnath", Email: "sanjibdebnath@gmail.com", UserType: "Internal", Company: "Tata Consultancy Services", AccessProfiles: "Rix Manager", LastLogin: "15/01/2024", Status:"Active"},
         { UserName: "Aritrak Debnath", Email: "aritrak.design@gmail.com", UserType: "Internal", Company: "Hindustan Unilever", AccessProfiles: "Group Admin", LastLogin: "15/01/2024", Status:"Updated"},
         { UserName: "Debashis Das", Email: "debashis.das@gmail.com", UserType: "Internal", Company: "Infosys", AccessProfiles: "Rix Manager", LastLogin: "15/01/2024", Status:"Active"},
@@ -61,13 +61,13 @@ function Table() {
       
       const [colDefs] = useState([
         //{ field: "UserName",   checkboxSelection:true,     lockPinned:true,  width:220, , cellRenderer: p => <strong>{p.value}</strong> },
-        { field: "UserName", cellRenderer: AddShortNameFunc, maxWidth:180, minWidth:180  },
-        { field: "Email",  maxWidth:200, minWidth:200 },
-        { field: "UserType",  maxWidth:150, minWidth:150  },
-        { field: "Company", filter:true,  tooltipField:'email', },
-        { field: "AccessProfiles" },
-        { field: "LastLogin" },
-        { field: "Status", cellRenderer: statusBtnFunc, resizable: false,  maxWidth:150, minWidth:150 }
+        { field: "UserName", cellRenderer: AddShortNameFunc,  maxWidth:220, minWidth:220, tooltipField:"UserName" },
+        { field: "Email",  maxWidth:220, minWidth:220 },
+        { field: "UserType"  },
+        { field: "Company", filter:true,  tooltipField:'email'},
+        { field: "AccessProfiles", cellRenderer: p => <span className='accessProfiles'>{p.value}</span>},
+        { field: "LastLogin",  maxWidth:150, minWidth:150  },
+        { field: "Status", cellRenderer: statusBtnFunc, resizable: false,  maxWidth:120, minWidth:120 }
       ]);
      
       //const defaultColDef = {sortable:true,  floatingFilter:false, editable:true, flex:1,  resizable: true, width:120,  wrapText: true,  autoHeight: true,} 
@@ -114,7 +114,7 @@ function Table() {
        //paginationAutoPageSize={true}
        onGridReady={onGridReady}
        paginationPageSizeSelector={[5, 10, 20, 50, 100]}
-       
+       enableBrowserTooltips={true}
 
    />
  </div>

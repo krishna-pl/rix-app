@@ -39,11 +39,11 @@ function navTrigger() {
     <nav id="nav_slider">
       <span className={styles.nav_trigger} id="nav_trigger" onClick={navTrigger}></span>
       <ul className={styles.navigation} id="navigation">
-        <li className={styles.user_management}><span>User Management</span></li>
+        <li className={`${styles.user_management} ${styles.umA}`}><span>User Management</span></li>
         <li className={`${styles.subNavTrigger} ${styles.global_masters}`} onClick={subNavTrigger} ><span>Global Masters</span>
             <ul className={styles.subNav} id="subNav">
-            <li>subNav 1</li>
-            <li>subNav 2</li>
+            <li>Collection Template</li>
+            <li>Business Partners</li>
             </ul>
         </li>
       </ul>
